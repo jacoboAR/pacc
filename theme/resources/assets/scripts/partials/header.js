@@ -1,0 +1,1 @@
+let logo = require('../../images/logo.svg');

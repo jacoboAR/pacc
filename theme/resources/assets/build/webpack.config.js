@@ -21,7 +21,7 @@ module.exports = {
     context: config.paths.assets,
     entry: config.entry,
     devtool: 'source-map',
-    cache: false,
+    cache: true,
     output: {
         path: config.paths.dist,
         filename: '[name].js'

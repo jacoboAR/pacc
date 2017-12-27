@@ -44,7 +44,7 @@ if ( ! function_exists( 'pacc_setup' ) ) :
 
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus( array(
-            'menu-1' => esc_html__( 'Primary', 'pacc' ),
+            'primary_navigation' => esc_html__( 'Primary', 'pacc' )
         ) );
 
         /*
@@ -116,14 +116,14 @@ add_action( 'widgets_init', 'pacc_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function zadia_scripts() {
-    wp_enqueue_style( 'zadia-main-css', get_template_directory_uri() . '/dist/main.css', array(), true);
+function pacc_scripts() {
+    wp_enqueue_style( 'pacc-main-css', get_template_directory_uri() . '/dist/main.css', array(), true);
 
-    wp_enqueue_script( 'zadia-main-js', get_template_directory_uri() . '/dist/main.js', array(), true );
+    wp_enqueue_script( 'pacc-main-js', get_template_directory_uri() . '/dist/main.js', array(), true );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
 }
-add_action( 'wp_enqueue_scripts', 'zadia_scripts' );
+add_action( 'wp_enqueue_scripts', 'pacc_scripts' );
 

@@ -1,0 +1,26 @@
+.nav__menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 150px);
+    padding: 0 5%;
+    margin: 0;
+    list-style: none;
+    li {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        ul.sub-menu {
+            position: absolute;
+            top: 10px;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            font-family: 'LatoBold', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: $black-brand;
+        }
+    }
+}
